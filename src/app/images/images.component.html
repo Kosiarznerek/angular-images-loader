@@ -13,12 +13,12 @@
 
 <!-- Image loader template -->
 <ng-template #imageLoaderTemplate>
-  <div class="image-loader">Loading image src</div>
+  <div class="image-loader">Loading image source</div>
 </ng-template>
 
 <!-- Image error template -->
 <ng-template #imageErrorTemplate>
-  <div class="image-error">Sorry, but an error happened</div>
+  <div class="image-error">Image source couldn't be loaded</div>
 </ng-template>
 
 <!-- No images container -->
@@ -29,7 +29,7 @@
 <!-- Loading container -->
 <div class="loading-container"
      *ngIf="(imagesDetails$ | async) !== undefined && (imagesDetails$ | async)?.length === null">
-  <h2>Loading images</h2>
+  <h2>Loading images list</h2>
 </div>
 
 <!-- Error container -->

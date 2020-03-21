@@ -28,7 +28,7 @@ export class ImagesComponent implements OnInit {
 
     // Getting images data
     this.imagesDetails$ = this.dataImagesService.getImages(12).pipe(
-      delay(Math.random() * 3_000), // delay to be able to see loading
+      delay(Math.random() * 5_000), // delay to be able to see loading
       shareReplay(),
       catchError(() => of(undefined)),
     );

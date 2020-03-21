@@ -29,12 +29,32 @@ export class ImageLoaderDirective implements OnInit, OnDestroy {
   }
 
   /**
+   * Shows image element
+   */
+  private showImageElement(): void {
+
+    this.imageElement.style.opacity = '1';
+    this.imageElement.style.height = 'inherit';
+
+  }
+
+  /**
+   * Hides image element
+   */
+  private hideImageElement(): void {
+
+    this.imageElement.style.opacity = '0';
+    this.imageElement.style.height = '0px';
+
+  }
+
+  /**
    * NgOnInit
    */
   public ngOnInit(): void {
 
     // Hide image element
-    this.imageElement.style.display = 'none';
+    this.hideImageElement();
 
     // Compile loading template
     this.embeddedView = this.viewContainerRef.createEmbeddedView(this.imageLoaderTemplate);
@@ -61,13 +81,13 @@ export class ImageLoaderDirective implements OnInit, OnDestroy {
   private async imageOnLoad(event: Event): Promise<void> {
 
     // Delay to be able to see loading
-    await new Promise(r => setTimeout(r, Math.random() * 3_000));
+    await new Promise(r => setTimeout(r, Math.random() * 5_000));
 
     // Destroy loading template
     this.embeddedView.destroy();
 
     // Show image element
-    this.imageElement.style.display = 'block';
+    this.showImageElement();
 
   }
 
@@ -79,7 +99,7 @@ export class ImageLoaderDirective implements OnInit, OnDestroy {
   private async imageOnError(event: Event): Promise<void> {
 
     // Delay to be able to see loading
-    await new Promise(r => setTimeout(r, Math.random() * 3_000));
+    await new Promise(r => setTimeout(r, Math.random() * 5_000));
 
     // Compile error template
     this.embeddedView = this.viewContainerRef.createEmbeddedView(this.imageErrorTemplate);
