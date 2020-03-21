@@ -15,7 +15,7 @@ https://jsonplaceholder.typicode.com/albums/1/photos?_limit=10
 should be easily customizable  
     b. Before the image is loaded there should be a loader to indicate that the
 image is loading  
-    c.The loader should have a CSS animation of your choice  
+    c. The loader should have a CSS animation of your choice  
     d. Bonus points for making images fade in smoothly  
     e. Bonus points for making it work with background images
 6. Add lazy loading directive to the elements
