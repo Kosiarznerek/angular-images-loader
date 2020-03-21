@@ -1,9 +1,9 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "koffeecup-interview-task": {
+    "images-loader": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/koffeecup-interview-task",
+            "outputPath": "dist/images-loader",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "koffeecup-interview-task:build"
+            "browserTarget": "images-loader:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "koffeecup-interview-task:build:production"
+              "browserTarget": "images-loader:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "koffeecup-interview-task:build"
+            "browserTarget": "images-loader:build"
           }
         },
         "test": {
@@ -110,15 +110,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "koffeecup-interview-task:serve"
+            "devServerTarget": "images-loader:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "koffeecup-interview-task:serve:production"
+              "devServerTarget": "images-loader:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "koffeecup-interview-task"
+  "defaultProject": "images-loader"
 }
