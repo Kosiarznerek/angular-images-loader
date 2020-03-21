@@ -7,6 +7,7 @@ import {AppComponent} from './app.component';
 import {HeaderComponent} from './header/header.component';
 import {ImagesComponent} from './images/images.component';
 import {UnknownRouteComponent} from './unknown-route/unknown-route.component';
+import {ImageLoaderDirective} from './images/image-loader/image-loader.directive';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import {UnknownRouteComponent} from './unknown-route/unknown-route.component';
     HeaderComponent,
     ImagesComponent,
     UnknownRouteComponent,
+    ImageLoaderDirective,
   ],
   imports: [
     BrowserModule,

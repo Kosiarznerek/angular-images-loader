@@ -15,5 +15,6 @@ ng-component {
   --color-gray: #898f9c;
   --color-blue-light: #4267b2;
   --color-blue: #365899;
-  --color-blue-dark: #29487d
+  --color-blue-dark: #29487d;
+  --color-red: #CC0000;
 }

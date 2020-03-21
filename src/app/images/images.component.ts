@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {DataImagesService} from './data-images/data-images.service';
 import {Observable, of} from 'rxjs';
 import {IImageDetails} from './data-images/data-images.service.models';
-import {catchError, shareReplay} from 'rxjs/operators';
+import {catchError, delay, shareReplay} from 'rxjs/operators';
 
 @Component({
   templateUrl: './images.component.html',
@@ -27,7 +27,8 @@ export class ImagesComponent implements OnInit {
   public ngOnInit(): void {
 
     // Getting images data
-    this.imagesDetails$ = this.dataImagesService.getImages(10).pipe(
+    this.imagesDetails$ = this.dataImagesService.getImages(1).pipe(
+      delay(Math.random() * 3_000), // delay to be able to see loading
       shareReplay(),
       catchError(() => of(undefined)),
     );

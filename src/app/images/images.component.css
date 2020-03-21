@@ -5,9 +5,29 @@ div.images-container {
   flex-wrap: wrap;
 }
 
+/* Image loader, Image error */
+div.image-loader,
+div.image-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  border-bottom: 3px solid var(--color-blue-dark);
+  font-weight: bold;
+}
+
+div.image-loader {
+  color: var(--color-blue-dark);
+}
+
+div.image-error {
+  color: var(--color-red);
+}
+
 /* Images wrapper */
 div.images-container > div.image-wrapper {
   display: flex;
+  min-height: 300px;
   flex-direction: column;
   margin: 5px;
   border: 3px solid var(--color-blue-dark);
@@ -37,6 +57,7 @@ div.images-container > div.image-wrapper > p {
   flex: 1;
   align-items: center;
   justify-content: center;
+  font-weight: bold;
 }
 
 /* No images, loading and error container */

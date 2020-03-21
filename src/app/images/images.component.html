@@ -3,12 +3,23 @@
 
   <!-- Image data -->
   <div class="image-wrapper" *ngFor="let imageDetails of imagesDetails$ | async">
-    <img [src]="imageDetails.url" [attr.alt]="imageDetails.title"/>
+    <img appImageLoader [imageLoaderTemplate]="imageLoaderTemplate" [imageErrorTemplate]="imageErrorTemplate"
+         [src]="imageDetails.url" [attr.alt]="imageDetails.title"/>
     <p>{{ imageDetails.title }}</p>
   </div>
 
 </div>
 <!-- /Images container -->
+
+<!-- Image loader template -->
+<ng-template #imageLoaderTemplate>
+  <div class="image-loader">Loading image src</div>
+</ng-template>
+
+<!-- Image error template -->
+<ng-template #imageErrorTemplate>
+  <div class="image-error">Sorry, but an error happened</div>
+</ng-template>
 
 <!-- No images container -->
 <div class="no-images" *ngIf="(imagesDetails$ | async) && (imagesDetails$ | async).length === 0">
