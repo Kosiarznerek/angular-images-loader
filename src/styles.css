@@ -5,6 +5,10 @@ html, body {
   font-family: 'Roboto', sans-serif;
 }
 
+ng-component {
+  width: 100%;
+}
+
 /* Colors variables */
 :root {
   --color-white: #e9ebee;

@@ -1,0 +1,13 @@
+/* Container style */
+div {
+  background: var(--color-white);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Text */
+h2 {
+  color: var(--color-blue);
+}

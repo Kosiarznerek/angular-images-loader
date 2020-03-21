@@ -1,0 +1,57 @@
+/* Images container */
+div.images-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Images wrapper */
+div.images-container > div.image-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  border: 3px solid var(--color-blue-dark);
+}
+
+@media (min-width: 576px) {
+  div.images-container > div.image-wrapper {
+    width: calc(100% / 2 - 16px);
+  }
+}
+
+@media (min-width: 768px) {
+  div.images-container > div.image-wrapper {
+    width: calc(100% / 3 - 16px);
+  }
+}
+
+div.images-container > div.image-wrapper > img {
+  max-width: 100%;
+  height: auto;
+}
+
+div.images-container > div.image-wrapper > p {
+  color: var(--color-blue);
+  text-align: center;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+/* No images, loading and error container */
+div.no-images,
+div.loading-container,
+div.error-container {
+  background: var(--color-white);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.no-images h2,
+div.loading-container h2,
+div.error-container h2 {
+  color: var(--color-blue);
+}
