@@ -27,6 +27,7 @@ div.image-error {
 /* Images wrapper */
 div.images-container > div.image-wrapper {
   display: flex;
+  width: 100%;
   min-height: 300px;
   flex-direction: column;
   margin: 5px;
